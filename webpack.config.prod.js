@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const CompressionPlugin = require("compression-webpack-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const port = process.env.PORT || 3000;
@@ -39,6 +40,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       favicon: 'public/favicon.ico'
+    }),
+    new CompressionPlugin({
+        algorithm: "gzip"
     })
   ],
   devServer: {
