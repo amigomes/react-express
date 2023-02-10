@@ -1,27 +1,13 @@
 {
   "files": {
-<<<<<<< HEAD
-    "main.css": "/react-express/static/css/main.c996c23c.css",
-    "main.js": "/react-express/static/js/main.ba055b71.js",
-    "static/media/aitoolbkg.png": "/react-express/static/media/aitoolbkg.9b745e130bf0288201c3.png",
-    "index.html": "/react-express/index.html",
-    "main.c996c23c.css.map": "/react-express/static/css/main.c996c23c.css.map",
-    "main.ba055b71.js.map": "/react-express/static/js/main.ba055b71.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.c996c23c.css",
-    "static/js/main.ba055b71.js"
-=======
-    "main.css": "/static/css/main.fac0b92a.css",
-    "main.js": "/static/js/main.81a66d8e.js",
-    "static/media/aitoolbkg.png": "/static/media/aitoolbkg.9b745e130bf0288201c3.png",
+    "main.css": "/static/css/main.abd64e84.css",
+    "main.js": "/static/js/main.1494e48d.js",
     "index.html": "/index.html",
-    "main.fac0b92a.css.map": "/static/css/main.fac0b92a.css.map",
-    "main.81a66d8e.js.map": "/static/js/main.81a66d8e.js.map"
+    "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
+    "main.1494e48d.js.map": "/static/js/main.1494e48d.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac0b92a.css",
-    "static/js/main.81a66d8e.js"
->>>>>>> 4ac2412d9a84ad4507160f250ad5fddc2629f582
+    "static/css/main.abd64e84.css",
+    "static/js/main.1494e48d.js"
   ]
 }
