@@ -1,7 +1,6 @@
 {
   "name": "aitool",
   "version": "0.1.0",
-  "homepage": "./",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -52,10 +51,6 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
     "gh-pages": "^5.0.0"
-=======
-    "compression-webpack-plugin": "^10.0.0"
->>>>>>> 213761d1 (removed unnecessary node_modules)
   }
 }
