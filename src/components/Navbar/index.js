@@ -19,10 +19,10 @@ return (
 			AITOOL
 		</NavLink>
 		<NavLink to='/submit' activeStyle>
-			submit tool
+			Submit New Tool
 		</NavLink>
 		<NavLink to='/community' activeStyle>
-			community
+			Community
 		</NavLink>
 		{/* Second Nav */}
 		{/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
