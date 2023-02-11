@@ -36,6 +36,9 @@ const useStyles = makeStyles({
     marginLeft: "15%",
     marginRight: "15%",
     marginTop: "1%"
+  },
+  cardContent: {
+    padding: "0px",
   }
 });
 
@@ -135,21 +138,12 @@ const Tools = () => {
     console.log(websiteUrl);
     return (
       <Grid key={pokemonIndex} item xs={12} sm={6} md={4} lg={3}>
-        <Card elevation={20} className={classes.pokemonCard}>
-          <CardContent align="center">
-            <Typography>{"Name: " + capitalize(`${name}`)}</Typography>
-            <CardMedia>
-              <div
-                style={{
-                  borderRadius: "50%",
-                  backgroundColor: "#F2F5C8",
-                  maxWidth: "90%"
-                }}
-              >
-                <img className={classes.pokemonImage} alt="" src={imgUrl}/>
-                {/* <input type="button" onClick={window.open(websiteUrl)}/> */}
-              </div>
-            </CardMedia>
+        <Card sx={{maxWidth:345}}>
+          <CardContent align="center" className={classes.cardContent}>
+            <Typography>{capitalize(`${name}`)}</Typography>
+            <CardMedia style={{ height: "200px", paddingTop: "2%" }}
+        image={imgUrl}
+      />
           </CardContent>
         </Card>
       </Grid>
