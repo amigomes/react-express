@@ -30,7 +30,7 @@ export const Bars = styled(FaBars)`
 display: none;
 color: #E7FBF7;
 @media screen and (max-width: 768px) {
-	display: block;
+	display: flex;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -43,20 +43,20 @@ color: #E7FBF7;
 export const NavMenu = styled.div`
 display: flex;
 align-items: center;
-margin-right: -24px;
+margin-right: -10px;
 /* Second Nav */
 /* margin-right: 24px; */
 /* Third Nav */
 /* width: 100vw;
 white-space: nowrap; */
 @media screen and (max-width: 768px) {
-	display: none;
+	display: flex;
 }
 `;
 
 export const NavBtn = styled.nav`
 display: flex;
-align-items: center;
+align-items: center;\
 margin-right: 24px;
 /* Third Nav */
 /* justify-content: flex-end;
