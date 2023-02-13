@@ -84,7 +84,8 @@ const Tools = () => {
           data.forEach((pokemon, index) => {
             newPokemonData.push({
               name: pokemon.toolName,
-              imgUrl: "https://cdn.sanity.io/images/u0v1th4q/production/"+ pokemon.ImageUrl
+              imgUrl: "https://cdn.sanity.io/images/u0v1th4q/production/"+ pokemon.ImageUrl,
+              websiteUrl: pokemon.websiteUrl
             });
           });
           setPokemonData(newPokemonData);
@@ -105,14 +106,12 @@ const Tools = () => {
       }
       else
       {
-      console.log(searchTerm);
       await axios
         .get("https://concerned-worm-handbag.cyclic.app/aitools?toolName="+searchTerm)
         .then((response) => {
           const data = response.data;
           const newPokemonData = [];
           data.forEach((pokemon, index) => {
-            console.log(pokemon);
             newPokemonData.push({
               name: pokemon.toolName,
               imgUrl: "https://cdn.sanity.io/images/u0v1th4q/production/"+ pokemon.ImageUrl,
@@ -135,9 +134,9 @@ const Tools = () => {
 
   const renderCards = (pokemonIndex) => {
     const { name, imgUrl, websiteUrl } = pokemonData[pokemonIndex];
-    console.log(websiteUrl);
     return (
       <Grid key={pokemonIndex} item xs={12} sm={6} md={4} lg={3}>
+        <a href={websiteUrl}>
         <Card sx={{maxWidth:345}}>
           <CardContent align="center" className={classes.cardContent}>
             <Typography>{capitalize(`${name}`)}</Typography>
@@ -146,6 +145,7 @@ const Tools = () => {
       />
           </CardContent>
         </Card>
+        </a>
       </Grid>
     );
   };
