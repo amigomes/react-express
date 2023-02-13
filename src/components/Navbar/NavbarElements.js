@@ -21,6 +21,7 @@ text-decoration: none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
+font-weight: 900;
 &.active {
 	color: #000000;
 }
