@@ -136,7 +136,7 @@ const Tools = () => {
     const { name, imgUrl, websiteUrl } = pokemonData[pokemonIndex];
     return (
       <Grid key={pokemonIndex} item xs={12} sm={6} md={4} lg={3}>
-        <a href={websiteUrl}>
+        <a href={"tooldetails/"+name}>
         <Card sx={{maxWidth:345}}>
           <CardContent align="center" className={classes.cardContent}>
             <Typography>{capitalize(`${name}`)}</Typography>
