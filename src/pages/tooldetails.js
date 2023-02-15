@@ -9,8 +9,32 @@ import './css/tooldetails.css';
 import {
     CardMedia,
   } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
 
+const useStyles = makeStyles({
+    toolHeading : {
+        fontWeight: 900,
+        fontSize: "large",
+    },
+    detailscontainer: {
+        display: "flex",
+        alignItems: "center",
+        flexFlow: "column",
+        marginLeft: "15%",
+        marginRight: "15%",
+    },
+    tooldetailscontainer: {
+        display: "flex",
+        alignItems: "center",
+        flexFlow: "row",
+        marginLeft: "25%",
+        marginRight: "25%",
+        flexGrow:0,
+        flexShrink:0,
+    }
+})
 const ToolDetails = () => {
+    const classes = useStyles();
     const { toolname } = useParams();
     const [toolDescription, settoolDescription] = useState();
     const [imgUrl, setimgUrl] = useState();
@@ -37,9 +61,9 @@ const ToolDetails = () => {
     useEffect(() => { fetchPrimaryPokemonData(); }, []);
 
     return (toolDescription != "" ? (
-        <div className="detailscontainer">
+        <div className={classes.detailscontainer}>
             <a href={websiteUrl}><div className="toolHeading">{toolname}</div></a>
-            <div className="tooldetailscontainer">
+            <div className={classes.tooldetailscontainer}>
                 <div className="imagebox"><img src={imgUrl}/></div>
                 <div>{toolDescription}</div>
                 <div>
