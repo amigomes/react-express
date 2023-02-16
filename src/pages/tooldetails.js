@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { CircularProgress, LinearProgress } from "@mui/material";
 import Box from '@mui/material/Box';
-import './css/tooldetails.css';
 import {
     CardMedia,
   } from "@material-ui/core";
