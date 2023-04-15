@@ -1,0 +1,18 @@
+.toolHeading {
+    font-Weight: 900;
+    font-Size: large;
+}
+.detailscontainer {
+    display: flex;
+    flex-flow: row;
+    width: 100%
+}
+.detailscontainer :first-child {
+    display: flex;
+    flex: 0 auto;
+  }
+
+ .detailscontainer > * {
+   flex: 2 0 auto;
+   display: flex;
+ }
