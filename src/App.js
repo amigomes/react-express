@@ -13,7 +13,7 @@ return (
 	<Routes>
 		<Route path='/' exact element={<Home/>} />
 		<Route path='/submit' element={<Submit/>} />
-		<Route path='/tooldetails/:toolname' element={<ToolDetails/>}/>
+		<Route path='/tooldetails' element={<ToolDetails/>}/>
 	</Routes>
 	</Router>
 );
