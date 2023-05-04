@@ -1,36 +1,31 @@
 import {
-    useParams,useLocation,
+    useParams, useLocation,
 } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { CircularProgress,} from "@mui/material";
+import { CircularProgress, } from "@mui/material";
 import { makeStyles } from "@material-ui/styles";
 
-const useStyles = makeStyles({
-    toolHeading : {
-        fontWeight: 900,
-        fontSize: "large",
-    },
-    detailscontainer: {
-        display: "flex",
-        alignItems: "center",
-        flexFlow: "column",
-        marginLeft: "15%",
-        marginRight: "15%",
-    },
-    tooldetailscontainer: {
-        display: "flex",
-        alignItems: "center",
-        flexFlow: "row",
-        marginLeft: "25%",
-        marginRight: "25%",
-        flexGrow:0,
-        flexShrink:0,
-    }
-})
+const tooldetailscontainer = {
+    display: "flex",
+    flexFlow: "row",
+    justifyContent: "space-evenly",
+    marginLeft: "10%",
+    marginRight: "10%",
+    marginTop: "2%"
+};
+
+const toolImage = {
+    display: "flex",
+    width: "50%"
+};
+
+const toolSideColumn = {
+    width: "50%",
+    margin:"5%"
+};
+
 const ToolDetails = () => {
-    const classes = useStyles();
-    // const { name } = useParams();
     const location = useLocation();
     const queryParameters = new URLSearchParams(location.search);
     const toolname = queryParameters.get("name");
@@ -57,13 +52,12 @@ const ToolDetails = () => {
     useEffect(() => { fetchPrimaryPokemonData(); }, []);
 
     return (toolDescription != "" ? (
-        <div className={classes.detailscontainer}>
-            <a href={websiteUrl}><div className="toolHeading">{toolname}</div></a>
-            <div className={classes.tooldetailscontainer}>
-                <div className="imagebox"><img src={imgUrl}/></div>
+        <div style={tooldetailscontainer}>
+            <div style={toolImage}><img style={{width:"100%"}}src={imgUrl} /></div>
+            <div style={toolSideColumn}>
                 <div>{toolDescription}</div>
-                <div>
-                    {websiteUrl}
+                <div style={{paddingTop:"5%"}}>
+                    <a href={websiteUrl} target="_blank">Visit Tool Homepage</a>
                 </div>
             </div>
         </div>
